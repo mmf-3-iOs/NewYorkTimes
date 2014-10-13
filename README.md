@@ -1,4 +1,4 @@
-PikabuSurfer
+NewYorkTimes
 ============
 
-App for iOs providing Pikabu news
+App for iOs providing New York Times news
