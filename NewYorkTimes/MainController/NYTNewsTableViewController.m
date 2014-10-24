@@ -30,7 +30,9 @@
     
     // Set Title
     self.title = @"New York Times";
-    
+    //UIStoryboard *storybord  = [UIStoryboard storyboardWithName:@"MyStoryboard" bundle:nil];
+    //UIViewController *menu= [storybord instantiateViewControllerWithIdentifier:@"menu"];
+    //[self addChildViewController:menu];
     //If the list of news was in file. Change for the list obtained from the API
     //NSString *filePath = [[NSBundle mainBundle] pathForResource:@"News" ofType:@"plist"];
     //NSLog(filePath);
@@ -72,7 +74,7 @@
 {
     static NSString *CellIdentifier = @"PrototypeNewsCell";
     
-    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
+   //[tableView registerClass:[ABCNewsPreviewCell class] forCellReuseIdentifier:CellIdentifier];
     
     ABCNewsPreviewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     

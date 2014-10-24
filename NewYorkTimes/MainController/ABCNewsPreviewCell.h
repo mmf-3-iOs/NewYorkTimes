@@ -14,5 +14,4 @@
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UITextView *text;
 
--(void)setName:(NSString *)name;
 @end

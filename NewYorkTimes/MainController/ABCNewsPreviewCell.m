@@ -30,8 +30,5 @@
 
     // Configure the view for the selected state
 }
--(void)setName:(NSString *)name{
-    _name.text = name;
-}
 
 @end
