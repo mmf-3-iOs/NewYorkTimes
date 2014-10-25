@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		849E9DED19FC0F660015C8D3 /* ABCDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849E9DEC19FC0F660015C8D3 /* ABCDetailsViewController.m */; };
 		84A05D2619F5124E002192A5 /* ABCNewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A05D2519F5124E002192A5 /* ABCNewsTableViewController.m */; };
 		84A05D2819F51889002192A5 /* News.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84A05D2719F51889002192A5 /* News.plist */; };
 		84A05D2B19F52820002192A5 /* ABCMainTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A05D2A19F52820002192A5 /* ABCMainTableView.m */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		849E9DEB19FC0F660015C8D3 /* ABCDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCDetailsViewController.h; sourceTree = "<group>"; };
+		849E9DEC19FC0F660015C8D3 /* ABCDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCDetailsViewController.m; sourceTree = "<group>"; };
 		84A05D2419F5124E002192A5 /* ABCNewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCNewsTableViewController.h; sourceTree = "<group>"; };
 		84A05D2519F5124E002192A5 /* ABCNewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCNewsTableViewController.m; sourceTree = "<group>"; };
 		84A05D2719F51889002192A5 /* News.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = News.plist; sourceTree = "<group>"; };
@@ -104,6 +107,7 @@
 		849E9DE819FC052B0015C8D3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				849E9DEA19FC0ECA0015C8D3 /* DetailViewController */,
 				849E9DE919FC06EA0015C8D3 /* SidePanelController */,
 				84A05D2319F5124E002192A5 /* NewsTableViewController */,
 			);
@@ -117,6 +121,15 @@
 				84A0997219F3E760001C76F1 /* ABCTestViewController.m */,
 			);
 			name = SidePanelController;
+			sourceTree = "<group>";
+		};
+		849E9DEA19FC0ECA0015C8D3 /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				849E9DEB19FC0F660015C8D3 /* ABCDetailsViewController.h */,
+				849E9DEC19FC0F660015C8D3 /* ABCDetailsViewController.m */,
+			);
+			name = DetailViewController;
 			sourceTree = "<group>";
 		};
 		84A05D2319F5124E002192A5 /* NewsTableViewController */ = {
@@ -312,6 +325,7 @@
 			files = (
 				84A0994619F3BEB8001C76F1 /* main.m in Sources */,
 				84A0994A19F3BEB8001C76F1 /* ABCAppDelegate.m in Sources */,
+				849E9DED19FC0F660015C8D3 /* ABCDetailsViewController.m in Sources */,
 				84A05D3119F55632002192A5 /* ABCNewsPreviewCell.m in Sources */,
 				84A05D2619F5124E002192A5 /* ABCNewsTableViewController.m in Sources */,
 				84A0997319F3E760001C76F1 /* ABCTestViewController.m in Sources */,

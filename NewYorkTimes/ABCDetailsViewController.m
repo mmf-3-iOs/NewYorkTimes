@@ -14,6 +14,9 @@
 
 @implementation ABCDetailsViewController
 
+@synthesize newsTitle;
+@synthesize newsTitleLabel;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -26,7 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    newsTitleLabel.text = newsTitle;
 }
 
 - (void)didReceiveMemoryWarning

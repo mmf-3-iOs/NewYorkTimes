@@ -67,7 +67,7 @@
                                     <outlet property="image" destination="G9p-Jn-oJp" id="n81-yR-49k"/>
                                     <outlet property="name" destination="Yzm-pw-iuh" id="p68-wf-RaT"/>
                                     <outlet property="text" destination="NHr-EZ-VKK" id="OmT-y4-lIc"/>
-                                    <segue destination="BEF-Fc-1AR" kind="push" id="VeU-lG-dhZ"/>
+                                    <segue destination="f4i-Du-14g" kind="push" identifier="showDetailsSegue" id="me9-LO-71C"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -82,21 +82,35 @@
             </objects>
             <point key="canvasLocation" x="399" y="795"/>
         </scene>
-        <!--View Controller - NewYorkTimes-->
-        <scene sceneID="uIN-RK-ax9">
+        <!--Details View Controller-->
+        <scene sceneID="rcP-Xa-BnP">
             <objects>
-                <viewController storyboardIdentifier="content" title="NewYorkTimes" id="BEF-Fc-1AR" sceneMemberID="viewController">
-                    <label key="view" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yYm-3V-uH8">
+                <viewController id="f4i-Du-14g" customClass="ABCDetailsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zsj-vN-ySj"/>
+                        <viewControllerLayoutGuide type="bottom" id="pwm-hW-duX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KIx-47-JzX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <navigationItem key="navigationItem" id="yUV-6D-1mG"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENx-TH-wj8">
+                                <rect key="frame" x="137" y="101" width="46" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="d4x-TB-Gwr"/>
+                    <connections>
+                        <outlet property="newsTitleLabel" destination="ENx-TH-wj8" id="KBG-UO-MsN"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gO0-0p-OVq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O9n-pQ-nO7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1018" y="750"/>
+            <point key="canvasLocation" x="1082" y="785"/>
         </scene>
         <!--Test View Controller - Title-->
         <scene sceneID="7jy-e9-rTw">

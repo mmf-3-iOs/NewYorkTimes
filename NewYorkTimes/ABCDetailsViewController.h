@@ -10,4 +10,7 @@
 
 @interface ABCDetailsViewController : UIViewController
 
+@property (nonatomic, strong) IBOutlet UILabel *newsTitleLabel;
+@property (nonatomic, strong) NSString *newsTitle;
+
 @end
