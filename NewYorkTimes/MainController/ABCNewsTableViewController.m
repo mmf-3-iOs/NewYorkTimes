@@ -1,19 +1,19 @@
 //
-//  NYTNewsTableViewController.m
+//  ABCNewsTableViewController.m
 //  NewYorkTimes
 //
 //  Created by Admin on 19.10.14.
 //  Copyright (c) 2014 exadel. All rights reserved.
 //
 
-#import "NYTNewsTableViewController.h"
+#import "ABCNewsTableViewController.h"
 #import "ABCNewsPreviewCell.h"
 
-@interface NYTNewsTableViewController ()
+@interface ABCNewsTableViewController ()
 
 @end
 
-@implementation NYTNewsTableViewController
+@implementation ABCNewsTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {

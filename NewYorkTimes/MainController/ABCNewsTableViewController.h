@@ -1,5 +1,5 @@
 //
-//  NYTNewsTableViewController.h
+//  ABCNewsTableViewController.h
 //  NewYorkTimes
 //
 //  Created by Admin on 19.10.14.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NYTNewsTableViewController : UITableViewController
+@interface ABCNewsTableViewController : UITableViewController
 
 @property (strong, nonatomic) NSArray *news;
 

@@ -22,7 +22,7 @@
         <!--News Table View Controller - Title-->
         <scene sceneID="IOk-7h-hoK">
             <objects>
-                <tableViewController storyboardIdentifier="menu" id="Qhk-xl-UcV" customClass="NYTNewsTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="menu" id="Qhk-xl-UcV" customClass="ABCNewsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="107" sectionHeaderHeight="22" sectionFooterHeight="22" id="bQY-5g-Slj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,10 +82,10 @@
             </objects>
             <point key="canvasLocation" x="399" y="795"/>
         </scene>
-        <!--Test View Controller - NewYorkTimes-->
+        <!--View Controller - NewYorkTimes-->
         <scene sceneID="uIN-RK-ax9">
             <objects>
-                <viewController storyboardIdentifier="content" title="NewYorkTimes" id="BEF-Fc-1AR" customClass="ABCTestViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="content" title="NewYorkTimes" id="BEF-Fc-1AR" sceneMemberID="viewController">
                     <label key="view" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yYm-3V-uH8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
