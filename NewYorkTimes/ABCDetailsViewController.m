@@ -14,8 +14,15 @@
 
 @implementation ABCDetailsViewController
 
-@synthesize newsTitle;
 @synthesize newsTitleLabel;
+@synthesize newsImageView;
+@synthesize dateLabel;
+@synthesize newsTextView;
+//@synthesize newsTitle;
+//@synthesize newsPublishDate;
+//@synthesize newsFullText;
+//@synthesize newsImage;
+@synthesize news;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,7 +36,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    newsTitleLabel.text = newsTitle;
+//    newsTitleLabel.text = newsTitle;
+//    dateLabel.text = newsPublishDate;
+//    newsTextView.text = newsFullText;
+//    newsImageView.image = newsImage;
+    newsTitleLabel.text = news.newsTitle;
+    dateLabel.text = news.newsPublishDate;
+    newsTextView.text = news.newsFullText;
+    newsImageView.image = news.newsImage;
 }
 
 - (void)didReceiveMemoryWarning

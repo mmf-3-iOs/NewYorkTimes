@@ -9,6 +9,7 @@
 #import "ABCNewsTableViewController.h"
 #import "ABCNewsPreviewCell.h"
 #import "ABCDetailsViewController.h"
+#import "ABCNews.h"
 
 @interface ABCNewsTableViewController ()
 
@@ -40,7 +41,19 @@
     //self.news = [NSArray arrayWithContentsOfFile:filePath];
     //NSString *num = [NSString stringWithFormat:@"%d",[self.news count]];
     //NSLog(num);
-    self.news = [[NSArray alloc]initWithObjects:@"item1",@"item2",@"item3", nil];
+    ABCNews *n1 = [ABCNews alloc];
+    n1.newsTitle = @"In U.S., Ebola Fears Close Schools and Shape Politics";
+    n1.newsPublishDate = @"OCT. 19, 2014";
+    n1.newsTextPreview = @"The line between vigilance and hysteria can be blurry in debating how to manage potential threats to public health.";
+    n1.newsFullText = @"The line between vigilance and hysteria can be blurry in debating how to manage potential threats to public health.";
+    n1.newsImage = [UIImage imageNamed:@"1.jpg"];
+    ABCNews *n2 = [ABCNews alloc];
+    n2.newsTitle = @"Where Young College Graduates Are Choosing to Live";
+    n2.newsPublishDate = @"OCT. 20, 2014";
+    n2.newsTextPreview = @"More young people are moving to the very heart of cities, even in economically troubled places like Buffalo and Cleveland.";
+    n2.newsFullText = @"More young people are moving to the very heart of cities, even in economically troubled places like Buffalo and Cleveland.";
+    n2.newsImage = [UIImage imageNamed:@"2.jpg"];
+    self.news = [[NSArray alloc]initWithObjects:n1,n2, nil];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -80,12 +93,14 @@
     ABCNewsPreviewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Fetch News
-    NSString *news = [self.news objectAtIndex:[indexPath row]];
+    ABCNews *news = [self.news objectAtIndex:[indexPath row]];
     
     //[cell setName:news];
     // Configure Cell
-    [cell.name setText:news];
-    
+    [cell.name setText:news.newsTitle];
+    [cell.date setText:news.newsPublishDate];
+    [cell.text setText:news.newsTextPreview];
+    [cell.image setImage:news.newsImage];
     
     return cell;
 }
@@ -96,7 +111,7 @@
     if([segue.identifier isEqualToString:@"showDetailsSegue"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         ABCDetailsViewController *destController = segue.destinationViewController;
-        destController.newsTitle = [self.news objectAtIndex:[indexPath row]];
+        destController.news = [self.news objectAtIndex:[indexPath row]];
     };
 }
 

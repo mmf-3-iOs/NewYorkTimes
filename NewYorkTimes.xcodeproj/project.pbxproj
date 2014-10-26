@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		849E9DED19FC0F660015C8D3 /* ABCDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849E9DEC19FC0F660015C8D3 /* ABCDetailsViewController.m */; };
+		849E9DF119FD01D10015C8D3 /* ABCNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 849E9DF019FD01D10015C8D3 /* ABCNews.m */; };
+		849E9DF419FD09FD0015C8D3 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 849E9DF219FD09FD0015C8D3 /* 1.jpg */; };
+		849E9DF519FD09FD0015C8D3 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 849E9DF319FD09FD0015C8D3 /* 2.jpg */; };
 		84A05D2619F5124E002192A5 /* ABCNewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A05D2519F5124E002192A5 /* ABCNewsTableViewController.m */; };
 		84A05D2819F51889002192A5 /* News.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84A05D2719F51889002192A5 /* News.plist */; };
 		84A05D2B19F52820002192A5 /* ABCMainTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A05D2A19F52820002192A5 /* ABCMainTableView.m */; };
@@ -41,6 +44,10 @@
 /* Begin PBXFileReference section */
 		849E9DEB19FC0F660015C8D3 /* ABCDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCDetailsViewController.h; sourceTree = "<group>"; };
 		849E9DEC19FC0F660015C8D3 /* ABCDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCDetailsViewController.m; sourceTree = "<group>"; };
+		849E9DEF19FD01D10015C8D3 /* ABCNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCNews.h; sourceTree = "<group>"; };
+		849E9DF019FD01D10015C8D3 /* ABCNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCNews.m; sourceTree = "<group>"; };
+		849E9DF219FD09FD0015C8D3 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		849E9DF319FD09FD0015C8D3 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 		84A05D2419F5124E002192A5 /* ABCNewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCNewsTableViewController.h; sourceTree = "<group>"; };
 		84A05D2519F5124E002192A5 /* ABCNewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCNewsTableViewController.m; sourceTree = "<group>"; };
 		84A05D2719F51889002192A5 /* News.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = News.plist; sourceTree = "<group>"; };
@@ -96,6 +103,7 @@
 		849E9DE719FC04F80015C8D3 /* SourceCode */ = {
 			isa = PBXGroup;
 			children = (
+				849E9DEE19FD01640015C8D3 /* NewsClass */,
 				849E9DE819FC052B0015C8D3 /* Controllers */,
 				84A0994819F3BEB8001C76F1 /* ABCAppDelegate.h */,
 				84A0994919F3BEB8001C76F1 /* ABCAppDelegate.m */,
@@ -130,6 +138,15 @@
 				849E9DEC19FC0F660015C8D3 /* ABCDetailsViewController.m */,
 			);
 			name = DetailViewController;
+			sourceTree = "<group>";
+		};
+		849E9DEE19FD01640015C8D3 /* NewsClass */ = {
+			isa = PBXGroup;
+			children = (
+				849E9DEF19FD01D10015C8D3 /* ABCNews.h */,
+				849E9DF019FD01D10015C8D3 /* ABCNews.m */,
+			);
+			name = NewsClass;
 			sourceTree = "<group>";
 		};
 		84A05D2319F5124E002192A5 /* NewsTableViewController */ = {
@@ -179,6 +196,8 @@
 			children = (
 				849E9DE719FC04F80015C8D3 /* SourceCode */,
 				84A0994B19F3BEB8001C76F1 /* Images.xcassets */,
+				849E9DF219FD09FD0015C8D3 /* 1.jpg */,
+				849E9DF319FD09FD0015C8D3 /* 2.jpg */,
 				84A0994019F3BEB8001C76F1 /* Supporting Files */,
 				84A0997019F3D957001C76F1 /* testCode */,
 			);
@@ -301,10 +320,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849E9DF519FD09FD0015C8D3 /* 2.jpg in Resources */,
 				84A0994419F3BEB8001C76F1 /* InfoPlist.strings in Resources */,
 				84A05D2819F51889002192A5 /* News.plist in Resources */,
 				84A0997F19F3EA03001C76F1 /* MyStoryboard.storyboard in Resources */,
 				84A0994C19F3BEB8001C76F1 /* Images.xcassets in Resources */,
+				849E9DF419FD09FD0015C8D3 /* 1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +351,7 @@
 				84A05D2619F5124E002192A5 /* ABCNewsTableViewController.m in Sources */,
 				84A0997319F3E760001C76F1 /* ABCTestViewController.m in Sources */,
 				84A05D2B19F52820002192A5 /* ABCMainTableView.m in Sources */,
+				849E9DF119FD01D10015C8D3 /* ABCNews.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
