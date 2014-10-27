@@ -16,4 +16,5 @@
 @property (nonatomic, weak, readonly) UIButton *removeRightPanel;
 @property (nonatomic, weak, readonly) UIButton *addRightPanel;
 @property (nonatomic, weak, readonly) UIButton *changeCenterPanel;
+@property (nonatomic, weak, readonly) UITableView *tableViewPanel;
 @end
