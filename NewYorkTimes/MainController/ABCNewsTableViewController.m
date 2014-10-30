@@ -9,10 +9,16 @@
 #import "ABCNewsTableViewController.h"
 #import "ABCNewsPreviewCell.h"
 #import "ABCDetailsViewController.h"
-#import "ABCNews.h"
 
-@interface ABCNewsTableViewController ()
+#import "Entry.h"
+#import "NYTimesManager.h"
+#import "NYTimesCommunicator.h"
 
+
+@interface ABCNewsTableViewController () <NYTimesManagerDelegate> {
+    NSArray *_entries;
+    NYTimesManager *_manager;
+}
 @end
 
 @implementation ABCNewsTableViewController
@@ -32,34 +38,29 @@
     
     // Set Title
     self.title = @"New York Times";
-    //UIStoryboard *storybord  = [UIStoryboard storyboardWithName:@"MyStoryboard" bundle:nil];
-    //UIViewController *menu= [storybord instantiateViewControllerWithIdentifier:@"menu"];
-    //[self addChildViewController:menu];
-    //If the list of news was in file. Change for the list obtained from the API
-    //NSString *filePath = [[NSBundle mainBundle] pathForResource:@"News" ofType:@"plist"];
-    //NSLog(filePath);
-    //self.news = [NSArray arrayWithContentsOfFile:filePath];
-    //NSString *num = [NSString stringWithFormat:@"%d",[self.news count]];
-    //NSLog(num);
-    ABCNews *n1 = [ABCNews alloc];
-    n1.newsTitle = @"In U.S., Ebola Fears Close Schools and Shape Politics";
-    n1.newsPublishDate = @"OCT. 19, 2014";
-    n1.newsTextPreview = @"The line between vigilance and hysteria can be blurry in debating how to manage potential threats to public health.";
-    n1.newsFullText = @"The line between vigilance and hysteria can be blurry in debating how to manage potential threats to public health.";
-    n1.newsImage = [UIImage imageNamed:@"1.jpg"];
-    ABCNews *n2 = [ABCNews alloc];
-    n2.newsTitle = @"Where Young College Graduates Are Choosing to Live";
-    n2.newsPublishDate = @"OCT. 20, 2014";
-    n2.newsTextPreview = @"More young people are moving to the very heart of cities, even in economically troubled places like Buffalo and Cleveland.";
-    n2.newsFullText = @"More young people are moving to the very heart of cities, even in economically troubled places like Buffalo and Cleveland.";
-    n2.newsImage = [UIImage imageNamed:@"2.jpg"];
-    self.news = [[NSArray alloc]initWithObjects:n1,n2, nil];
+    
+    _manager = [[NYTimesManager alloc] init];
+    _manager.communicator = [[NYTimesCommunicator alloc] init];
+    _manager.communicator.delegate = _manager;
+    _manager.delegate = self;
+    [_manager fetchEntries];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)didReceiveEntries:(NSArray *)entries
+{
+    _entries = entries;
+    [self.tableView reloadData];
+}
+
+- (void)fetchingEntriesFailedWithError:(NSError *)error
+{
+    NSLog(@"Error %@; %@", error, [error localizedDescription]);
 }
 
 - (void)didReceiveMemoryWarning
@@ -79,28 +80,24 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.news count];
+    return [_entries count];
 }
-
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"PrototypeNewsCell";
-    
-   //[tableView registerClass:[ABCNewsPreviewCell class] forCellReuseIdentifier:CellIdentifier];
+    NSString *CellIdentifier = @"PrototypeNewsCell";
     
     ABCNewsPreviewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Fetch News
-    ABCNews *news = [self.news objectAtIndex:[indexPath row]];
+    Entry *entry = [_entries objectAtIndex:indexPath.row];
     
     //[cell setName:news];
     // Configure Cell
-    [cell.name setText:news.newsTitle];
-    [cell.date setText:news.newsPublishDate];
-    [cell.text setText:news.newsTextPreview];
-    [cell.image setImage:news.newsImage];
+    [cell.title setText:entry.title];
+    [cell.date setText:entry.date];
+    [cell.text setText:entry.shortText];
+    //[cell.image setImage:news.newsImage];
     
     return cell;
 }
@@ -111,15 +108,8 @@
     if([segue.identifier isEqualToString:@"showDetailsSegue"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         ABCDetailsViewController *destController = segue.destinationViewController;
-        destController.news = [self.news objectAtIndex:[indexPath row]];
+        destController.entry = [_entries objectAtIndex:indexPath.row];
     };
 }
-
-/*-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UIStoryboard *storybord  = [UIStoryboard storyboardWithName:@"MyStoryboard" bundle:nil];
-    UIViewController *controller= [storybord instantiateViewControllerWithIdentifier:@"content"];
-    
-    [self.navigationController pushViewController:controller animated:YES];
-}*/
 
 @end

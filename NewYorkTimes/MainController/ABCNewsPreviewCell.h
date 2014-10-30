@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ABCNewsPreviewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UILabel *title;
 @property (weak, nonatomic) IBOutlet UILabel *date;
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UITextView *text;

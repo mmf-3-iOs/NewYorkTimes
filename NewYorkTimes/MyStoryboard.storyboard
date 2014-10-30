@@ -45,7 +45,7 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yzm-pw-iuh">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yzm-pw-iuh">
                                             <rect key="frame" x="13" y="0.0" width="185" height="60"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -64,8 +64,8 @@
                                 <connections>
                                     <outlet property="date" destination="sYy-ad-Qtl" id="dwc-Nh-pBU"/>
                                     <outlet property="image" destination="G9p-Jn-oJp" id="n81-yR-49k"/>
-                                    <outlet property="name" destination="Yzm-pw-iuh" id="p68-wf-RaT"/>
                                     <outlet property="text" destination="NHr-EZ-VKK" id="OmT-y4-lIc"/>
+                                    <outlet property="title" destination="Yzm-pw-iuh" id="Lxm-Ls-qGc"/>
                                     <segue destination="f4i-Du-14g" kind="push" identifier="showDetailsSegue" id="me9-LO-71C"/>
                                 </connections>
                             </tableViewCell>

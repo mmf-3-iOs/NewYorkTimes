@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>ED755743-163B-4682-B86C-35E7A81166D8</string>
+	<string>51A3D32B-2174-420F-B72B-3711E933AC35</string>
 	<key>IDESourceControlProjectName</key>
 	<string>NewYorkTimes</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>22926D34-6627-4400-A2F7-C2D253257D91</key>
-		<string>https://github.com/mmf-3-iOs/NewYorkTimes</string>
+		<key>CAC55AB3-7A9C-4C72-AE39-0B7BB8B34ACE</key>
+		<string>https://github.com/mmf-3-iOs/NewYorkTimes.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>NewYorkTimes.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>22926D34-6627-4400-A2F7-C2D253257D91</key>
+		<key>CAC55AB3-7A9C-4C72-AE39-0B7BB8B34ACE</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/mmf-3-iOs/NewYorkTimes</string>
+	<string>https://github.com/mmf-3-iOs/NewYorkTimes.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>22926D34-6627-4400-A2F7-C2D253257D91</string>
+	<string>CAC55AB3-7A9C-4C72-AE39-0B7BB8B34ACE</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>22926D34-6627-4400-A2F7-C2D253257D91</string>
+			<string>CAC55AB3-7A9C-4C72-AE39-0B7BB8B34ACE</string>
 			<key>IDESourceControlWCCName</key>
 			<string>NewYorkTimes</string>
 		</dict>
