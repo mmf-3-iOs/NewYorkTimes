@@ -97,7 +97,7 @@
     [cell.title setText:entry.title];
     [cell.date setText:entry.date];
     [cell.text setText:entry.shortText];
-    //[cell.image setImage:news.newsImage];
+    [cell.section setText:entry.section];
     
     return cell;
 }

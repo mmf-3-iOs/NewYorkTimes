@@ -8,6 +8,7 @@
 
 #import "APICommunicatorDelegate.h"
 #import "APICommunicator.h"
+#import "EntryItem.h"
 
 #define API_KEY_NEWSWIRE @"f2e766bfe17b4503a0ad499f800d4d0e%3A10%3A69971684"
 

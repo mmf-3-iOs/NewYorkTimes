@@ -16,7 +16,6 @@
 		849E9DF419FD09FD0015C8D3 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 849E9DF219FD09FD0015C8D3 /* 1.jpg */; };
 		849E9DF519FD09FD0015C8D3 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 849E9DF319FD09FD0015C8D3 /* 2.jpg */; };
 		84A05D2619F5124E002192A5 /* ABCNewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A05D2519F5124E002192A5 /* ABCNewsTableViewController.m */; };
-		84A05D2B19F52820002192A5 /* ABCMainTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A05D2A19F52820002192A5 /* ABCMainTableView.m */; };
 		84A05D3119F55632002192A5 /* ABCNewsPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A05D3019F55632002192A5 /* ABCNewsPreviewCell.m */; };
 		84A05D3719FE43B4002192A5 /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A05D3419FE43B4002192A5 /* JASidePanelController.m */; };
 		84A05D3819FE43B4002192A5 /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A05D3619FE43B4002192A5 /* UIViewController+JASidePanel.m */; };
@@ -33,7 +32,6 @@
 		84A0995519F3BEB8001C76F1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A0993D19F3BEB8001C76F1 /* UIKit.framework */; };
 		84A0995D19F3BEB8001C76F1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84A0995B19F3BEB8001C76F1 /* InfoPlist.strings */; };
 		84A0995F19F3BEB8001C76F1 /* NewYorkTimesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A0995E19F3BEB8001C76F1 /* NewYorkTimesTests.m */; };
-		84A0997319F3E760001C76F1 /* ABCTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A0997219F3E760001C76F1 /* ABCTestViewController.m */; };
 		84A0997F19F3EA03001C76F1 /* MyStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A0997E19F3EA03001C76F1 /* MyStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -64,8 +62,6 @@
 		849E9DF319FD09FD0015C8D3 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 		84A05D2419F5124E002192A5 /* ABCNewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCNewsTableViewController.h; sourceTree = "<group>"; };
 		84A05D2519F5124E002192A5 /* ABCNewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCNewsTableViewController.m; sourceTree = "<group>"; };
-		84A05D2919F52820002192A5 /* ABCMainTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCMainTableView.h; sourceTree = SOURCE_ROOT; };
-		84A05D2A19F52820002192A5 /* ABCMainTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCMainTableView.m; sourceTree = SOURCE_ROOT; };
 		84A05D2F19F55632002192A5 /* ABCNewsPreviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCNewsPreviewCell.h; sourceTree = "<group>"; };
 		84A05D3019F55632002192A5 /* ABCNewsPreviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCNewsPreviewCell.m; sourceTree = "<group>"; };
 		84A05D3319FE43B4002192A5 /* JASidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JASidePanelController.h; sourceTree = "<group>"; };
@@ -90,8 +86,6 @@
 		84A0995A19F3BEB8001C76F1 /* NewYorkTimesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NewYorkTimesTests-Info.plist"; sourceTree = "<group>"; };
 		84A0995C19F3BEB8001C76F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84A0995E19F3BEB8001C76F1 /* NewYorkTimesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewYorkTimesTests.m; sourceTree = "<group>"; };
-		84A0997119F3E760001C76F1 /* ABCTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ABCTestViewController.h; path = NewYorkTimes/testCode/ABCTestViewController.h; sourceTree = SOURCE_ROOT; };
-		84A0997219F3E760001C76F1 /* ABCTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ABCTestViewController.m; path = NewYorkTimes/testCode/ABCTestViewController.m; sourceTree = SOURCE_ROOT; };
 		84A0997E19F3EA03001C76F1 /* MyStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyStoryboard.storyboard; sourceTree = "<group>"; };
 		84FC4A191A0631890068A405 /* CategoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryItem.h; sourceTree = "<group>"; };
 		84FC4A1A1A0631890068A405 /* EntryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryItem.h; sourceTree = "<group>"; };
@@ -166,8 +160,6 @@
 		849E9DE919FC06EA0015C8D3 /* SidePanelController */ = {
 			isa = PBXGroup;
 			children = (
-				84A0997119F3E760001C76F1 /* ABCTestViewController.h */,
-				84A0997219F3E760001C76F1 /* ABCTestViewController.m */,
 				84A05D3919FE44B2002192A5 /* ABCSidePanel.h */,
 				84A05D3A19FE44B2002192A5 /* ABCSidePanel.m */,
 			);
@@ -244,7 +236,6 @@
 				849E9DF219FD09FD0015C8D3 /* 1.jpg */,
 				849E9DF319FD09FD0015C8D3 /* 2.jpg */,
 				84A0994019F3BEB8001C76F1 /* Supporting Files */,
-				84A0997019F3D957001C76F1 /* testCode */,
 			);
 			path = NewYorkTimes;
 			sourceTree = "<group>";
@@ -276,16 +267,6 @@
 				84A0995B19F3BEB8001C76F1 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		84A0997019F3D957001C76F1 /* testCode */ = {
-			isa = PBXGroup;
-			children = (
-				84A05D2919F52820002192A5 /* ABCMainTableView.h */,
-				84A05D2A19F52820002192A5 /* ABCMainTableView.m */,
-			);
-			name = testCode;
-			path = "untitled folder";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,10 +378,8 @@
 				84A05D3819FE43B4002192A5 /* UIViewController+JASidePanel.m in Sources */,
 				84A05D3719FE43B4002192A5 /* JASidePanelController.m in Sources */,
 				848D79781A02CCEA00896882 /* APICommunicator.m in Sources */,
-				84A0997319F3E760001C76F1 /* ABCTestViewController.m in Sources */,
 				843815371A0781500083A2F6 /* CategoryItem.m in Sources */,
 				843815351A0781450083A2F6 /* EntryItem.m in Sources */,
-				84A05D2B19F52820002192A5 /* ABCMainTableView.m in Sources */,
 				848D79791A02CCEA00896882 /* APIManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

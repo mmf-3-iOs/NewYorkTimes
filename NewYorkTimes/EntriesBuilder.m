@@ -39,6 +39,8 @@
                 entry.urlFullImage = [entryDic valueForKey:key];
             } else if ([key isEqual:@"created_date"]) {
                 entry.date = [entryDic valueForKey:key];
+            } else if ([key isEqual:@"section"]) {
+                entry.section = [entryDic valueForKey:key];
             }
         }
         [entries addObject:entry];
