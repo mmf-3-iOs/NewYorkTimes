@@ -10,14 +10,14 @@
 #import "ABCNewsPreviewCell.h"
 #import "ABCDetailsViewController.h"
 
-#import "Entry.h"
-#import "NYTimesManager.h"
-#import "NYTimesCommunicator.h"
+#import "EntryItem.h"
+#import "APIManager.h"
+#import "APICommunicator.h"
 
 
-@interface ABCNewsTableViewController () <NYTimesManagerDelegate> {
+@interface ABCNewsTableViewController () <APIManagerDelegate> {
     NSArray *_entries;
-    NYTimesManager *_manager;
+    APIManager *_manager;
 }
 @end
 
@@ -39,11 +39,11 @@
     // Set Title
     self.title = @"New York Times";
     
-    _manager = [[NYTimesManager alloc] init];
-    _manager.communicator = [[NYTimesCommunicator alloc] init];
+    _manager = [[APIManager alloc] init];
+    _manager.communicator = [[APICommunicator alloc] init];
     _manager.communicator.delegate = _manager;
     _manager.delegate = self;
-    [_manager fetchEntries];
+    [_manager fetchNews];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -52,13 +52,13 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)didReceiveEntries:(NSArray *)entries
+- (void)didReceive:(NSArray *)entries
 {
     _entries = entries;
     [self.tableView reloadData];
 }
 
-- (void)fetchingEntriesFailedWithError:(NSError *)error
+- (void)fetchingFailedWithError:(NSError *)error
 {
     NSLog(@"Error %@; %@", error, [error localizedDescription]);
 }
@@ -90,7 +90,7 @@
     ABCNewsPreviewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Fetch News
-    Entry *entry = [_entries objectAtIndex:indexPath.row];
+    EntryItem *entry = [_entries objectAtIndex:indexPath.row];
     
     //[cell setName:news];
     // Configure Cell

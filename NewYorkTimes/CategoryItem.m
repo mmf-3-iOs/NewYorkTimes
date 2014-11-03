@@ -1,13 +1,13 @@
 //
-//  ABCNewsTableViewController.h
+//  CategoryItem.m
 //  NewYorkTimes
 //
 //  Created by Admin on 19.10.14.
 //  Copyright (c) 2014 exadel. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CategoryItem.h"
 
-@interface ABCNewsTableViewController : UITableViewController
+@implementation CategoryItem
 
 @end

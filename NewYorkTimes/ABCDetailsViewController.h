@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Entry.h"
+#import "EntryItem.h"
 
 @interface ABCDetailsViewController : UIViewController
 
@@ -20,6 +20,6 @@
 //@property (nonatomic, strong) NSString *newsPublishDate;
 //@property (nonatomic, strong) NSString *newsFullText;
 //@property (nonatomic, strong) UIImage *newsImage;
-@property (nonatomic, strong) Entry *entry;
+@property (nonatomic, strong) EntryItem *entry;
 
 @end

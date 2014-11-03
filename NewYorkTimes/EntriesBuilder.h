@@ -1,15 +1,16 @@
 //
-//  GroupBuilder.h
-//  BrowseMeetup
+//  EntriesBuilder.h
+//  NewYorkTimes
 //
-//  Created by Simon on 31/8/13.
-//  Copyright (c) 2013 TAMIM Ziad. All rights reserved.
+//  Created by Admin on 19.10.14.
+//  Copyright (c) 2014 exadel. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
 @interface EntriesBuilder : NSObject
 
-+ (NSArray *)entriesFromJSON:(NSData *)objectNotation error:(NSError **)error;
++ (NSArray *)newsFromJSON:(NSData *)objectNotation error:(NSError **)error;
++ (NSArray *)categoriesFromJSON:(NSData *)objectNotation error:(NSError **)error;
 
 @end
