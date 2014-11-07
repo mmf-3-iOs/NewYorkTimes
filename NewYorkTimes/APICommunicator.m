@@ -16,7 +16,8 @@
 
 - (void)getNews: (NSString *)category
 {
-    NSString *urlAsString = [NSString stringWithFormat:@"http://api.nytimes.com/svc/news/v3/content/all/%@/.json?api-key=%@", category, API_KEY_NEWSWIRE];
+    NSString *urlDecodeCategory = [category stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *urlAsString = [NSString stringWithFormat:@"http://api.nytimes.com/svc/news/v3/content/all/%@/.json?api-key=%@", urlDecodeCategory, API_KEY_NEWSWIRE];
     NSURL *url = [[NSURL alloc] initWithString:urlAsString];
     
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
