@@ -9,10 +9,6 @@
 #import "ABCAppDelegate.h"
 
 
-#import "JASidePanelController.h"
-#import "ABCSidePanel.h"
-#import "ABCNewsTableViewController.h"
-
 @implementation ABCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -27,21 +23,6 @@
         splitViewController.delegate = (id)navigationController.topViewController;
     }*/
     
-    UIStoryboard *storybord  = [UIStoryboard storyboardWithName:@"MyStoryboard" bundle:nil];
-    UINavigationController *controller= [storybord instantiateViewControllerWithIdentifier:@"navigation"];
-    
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-	
-	self.viewController = [[JASidePanelController alloc] init];
-    self.viewController.shouldDelegateAutorotateToVisiblePanel = NO;
-    
-	self.viewController.leftPanel = [[ABCSidePanel alloc] init];
-	self.viewController.centerPanel =controller;
-    
-    /*[[UINavigationController alloc] initWithRootViewController:[[ABCNewsTableViewController alloc] init]];*/
-	
-	self.window.rootViewController = self.viewController;
-    [self.window makeKeyAndVisible];
     return YES;
 }
 

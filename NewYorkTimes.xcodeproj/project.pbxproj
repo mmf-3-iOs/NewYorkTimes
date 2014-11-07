@@ -17,9 +17,6 @@
 		849E9DF519FD09FD0015C8D3 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 849E9DF319FD09FD0015C8D3 /* 2.jpg */; };
 		84A05D2619F5124E002192A5 /* ABCNewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A05D2519F5124E002192A5 /* ABCNewsTableViewController.m */; };
 		84A05D3119F55632002192A5 /* ABCNewsPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A05D3019F55632002192A5 /* ABCNewsPreviewCell.m */; };
-		84A05D3719FE43B4002192A5 /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A05D3419FE43B4002192A5 /* JASidePanelController.m */; };
-		84A05D3819FE43B4002192A5 /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A05D3619FE43B4002192A5 /* UIViewController+JASidePanel.m */; };
-		84A05D3B19FE44B2002192A5 /* ABCSidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A05D3A19FE44B2002192A5 /* ABCSidePanel.m */; };
 		84A0993A19F3BEB8001C76F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A0993919F3BEB8001C76F1 /* Foundation.framework */; };
 		84A0993C19F3BEB8001C76F1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A0993B19F3BEB8001C76F1 /* CoreGraphics.framework */; };
 		84A0993E19F3BEB8001C76F1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A0993D19F3BEB8001C76F1 /* UIKit.framework */; };
@@ -33,6 +30,10 @@
 		84A0995D19F3BEB8001C76F1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84A0995B19F3BEB8001C76F1 /* InfoPlist.strings */; };
 		84A0995F19F3BEB8001C76F1 /* NewYorkTimesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A0995E19F3BEB8001C76F1 /* NewYorkTimesTests.m */; };
 		84A0997F19F3EA03001C76F1 /* MyStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A0997E19F3EA03001C76F1 /* MyStoryboard.storyboard */; };
+		84C6A5331A07C6D400E79E90 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C6A5321A07C6D400E79E90 /* SWRevealViewController.m */; };
+		84C6A5381A07D73E00E79E90 /* reveal-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C6A5371A07D73E00E79E90 /* reveal-icon.png */; };
+		84FC4A221A0CC3500068A405 /* ABCMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FC4A211A0CC3500068A405 /* ABCMenuViewController.m */; };
+		84FC4A281A0CC5AC0068A405 /* ABCMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FC4A271A0CC5AC0068A405 /* ABCMenuCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,12 +65,6 @@
 		84A05D2519F5124E002192A5 /* ABCNewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCNewsTableViewController.m; sourceTree = "<group>"; };
 		84A05D2F19F55632002192A5 /* ABCNewsPreviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCNewsPreviewCell.h; sourceTree = "<group>"; };
 		84A05D3019F55632002192A5 /* ABCNewsPreviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCNewsPreviewCell.m; sourceTree = "<group>"; };
-		84A05D3319FE43B4002192A5 /* JASidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JASidePanelController.h; sourceTree = "<group>"; };
-		84A05D3419FE43B4002192A5 /* JASidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JASidePanelController.m; sourceTree = "<group>"; };
-		84A05D3519FE43B4002192A5 /* UIViewController+JASidePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JASidePanel.h"; sourceTree = "<group>"; };
-		84A05D3619FE43B4002192A5 /* UIViewController+JASidePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JASidePanel.m"; sourceTree = "<group>"; };
-		84A05D3919FE44B2002192A5 /* ABCSidePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ABCSidePanel.h; path = testCode/ABCSidePanel.h; sourceTree = "<group>"; };
-		84A05D3A19FE44B2002192A5 /* ABCSidePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ABCSidePanel.m; path = testCode/ABCSidePanel.m; sourceTree = "<group>"; };
 		84A0993619F3BEB8001C76F1 /* NewYorkTimes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewYorkTimes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A0993919F3BEB8001C76F1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84A0993B19F3BEB8001C76F1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -87,8 +82,15 @@
 		84A0995C19F3BEB8001C76F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84A0995E19F3BEB8001C76F1 /* NewYorkTimesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewYorkTimesTests.m; sourceTree = "<group>"; };
 		84A0997E19F3EA03001C76F1 /* MyStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyStoryboard.storyboard; sourceTree = "<group>"; };
+		84C6A5311A07C6D400E79E90 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		84C6A5321A07C6D400E79E90 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		84C6A5371A07D73E00E79E90 /* reveal-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon.png"; sourceTree = "<group>"; };
 		84FC4A191A0631890068A405 /* CategoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryItem.h; sourceTree = "<group>"; };
 		84FC4A1A1A0631890068A405 /* EntryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryItem.h; sourceTree = "<group>"; };
+		84FC4A201A0CC3500068A405 /* ABCMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCMenuViewController.h; sourceTree = "<group>"; };
+		84FC4A211A0CC3500068A405 /* ABCMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCMenuViewController.m; sourceTree = "<group>"; };
+		84FC4A261A0CC5AC0068A405 /* ABCMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCMenuCell.h; sourceTree = "<group>"; };
+		84FC4A271A0CC5AC0068A405 /* ABCMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCMenuCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,8 +139,8 @@
 		849E9DE719FC04F80015C8D3 /* SourceCode */ = {
 			isa = PBXGroup;
 			children = (
+				84C6A5301A07C65D00E79E90 /* SWRevealViewController */,
 				848D796B1A02CCAF00896882 /* Model */,
-				84A05D3219FE43B4002192A5 /* Source */,
 				849E9DE819FC052B0015C8D3 /* Controllers */,
 				84A0994819F3BEB8001C76F1 /* ABCAppDelegate.h */,
 				84A0994919F3BEB8001C76F1 /* ABCAppDelegate.m */,
@@ -150,20 +152,11 @@
 		849E9DE819FC052B0015C8D3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				84FC4A1F1A0CC3130068A405 /* MenuViewController */,
 				849E9DEA19FC0ECA0015C8D3 /* DetailViewController */,
-				849E9DE919FC06EA0015C8D3 /* SidePanelController */,
 				84A05D2319F5124E002192A5 /* NewsTableViewController */,
 			);
 			name = Controllers;
-			sourceTree = "<group>";
-		};
-		849E9DE919FC06EA0015C8D3 /* SidePanelController */ = {
-			isa = PBXGroup;
-			children = (
-				84A05D3919FE44B2002192A5 /* ABCSidePanel.h */,
-				84A05D3A19FE44B2002192A5 /* ABCSidePanel.m */,
-			);
-			name = SidePanelController;
 			sourceTree = "<group>";
 		};
 		849E9DEA19FC0ECA0015C8D3 /* DetailViewController */ = {
@@ -185,17 +178,6 @@
 			);
 			name = NewsTableViewController;
 			path = MainController;
-			sourceTree = "<group>";
-		};
-		84A05D3219FE43B4002192A5 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				84A05D3319FE43B4002192A5 /* JASidePanelController.h */,
-				84A05D3419FE43B4002192A5 /* JASidePanelController.m */,
-				84A05D3519FE43B4002192A5 /* UIViewController+JASidePanel.h */,
-				84A05D3619FE43B4002192A5 /* UIViewController+JASidePanel.m */,
-			);
-			path = Source;
 			sourceTree = "<group>";
 		};
 		84A0992D19F3BEB8001C76F1 = {
@@ -243,6 +225,7 @@
 		84A0994019F3BEB8001C76F1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				84C6A5371A07D73E00E79E90 /* reveal-icon.png */,
 				84A0994119F3BEB8001C76F1 /* NewYorkTimes-Info.plist */,
 				84A0994219F3BEB8001C76F1 /* InfoPlist.strings */,
 				84A0994519F3BEB8001C76F1 /* main.m */,
@@ -267,6 +250,26 @@
 				84A0995B19F3BEB8001C76F1 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84C6A5301A07C65D00E79E90 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84C6A5311A07C6D400E79E90 /* SWRevealViewController.h */,
+				84C6A5321A07C6D400E79E90 /* SWRevealViewController.m */,
+			);
+			name = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		84FC4A1F1A0CC3130068A405 /* MenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84FC4A201A0CC3500068A405 /* ABCMenuViewController.h */,
+				84FC4A211A0CC3500068A405 /* ABCMenuViewController.m */,
+				84FC4A261A0CC5AC0068A405 /* ABCMenuCell.h */,
+				84FC4A271A0CC5AC0068A405 /* ABCMenuCell.m */,
+			);
+			name = MenuViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +353,7 @@
 				84A0997F19F3EA03001C76F1 /* MyStoryboard.storyboard in Resources */,
 				84A0994C19F3BEB8001C76F1 /* Images.xcassets in Resources */,
 				849E9DF419FD09FD0015C8D3 /* 1.jpg in Resources */,
+				84C6A5381A07D73E00E79E90 /* reveal-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,16 +373,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				848D79761A02CCEA00896882 /* EntriesBuilder.m in Sources */,
+				84FC4A281A0CC5AC0068A405 /* ABCMenuCell.m in Sources */,
 				84A0994619F3BEB8001C76F1 /* main.m in Sources */,
 				84A0994A19F3BEB8001C76F1 /* ABCAppDelegate.m in Sources */,
 				849E9DED19FC0F660015C8D3 /* ABCDetailsViewController.m in Sources */,
-				84A05D3B19FE44B2002192A5 /* ABCSidePanel.m in Sources */,
+				84FC4A221A0CC3500068A405 /* ABCMenuViewController.m in Sources */,
 				84A05D3119F55632002192A5 /* ABCNewsPreviewCell.m in Sources */,
 				84A05D2619F5124E002192A5 /* ABCNewsTableViewController.m in Sources */,
-				84A05D3819FE43B4002192A5 /* UIViewController+JASidePanel.m in Sources */,
-				84A05D3719FE43B4002192A5 /* JASidePanelController.m in Sources */,
 				848D79781A02CCEA00896882 /* APICommunicator.m in Sources */,
 				843815371A0781500083A2F6 /* CategoryItem.m in Sources */,
+				84C6A5331A07C6D400E79E90 /* SWRevealViewController.m in Sources */,
 				843815351A0781450083A2F6 /* EntryItem.m in Sources */,
 				848D79791A02CCEA00896882 /* APIManager.m in Sources */,
 			);

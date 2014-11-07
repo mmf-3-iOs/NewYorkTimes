@@ -9,6 +9,7 @@
 #import "ABCNewsTableViewController.h"
 #import "ABCNewsPreviewCell.h"
 #import "ABCDetailsViewController.h"
+#import "SWRevealViewController.h"
 
 #import "EntryItem.h"
 #import "APIManager.h"
@@ -19,6 +20,7 @@
     NSArray *_entries;
     APIManager *_manager;
 }
+@property (nonatomic) IBOutlet UIBarButtonItem* menuButton;
 @end
 
 @implementation ABCNewsTableViewController
@@ -35,9 +37,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self customSetup];
     
-    // Set Title
-    self.title = @"New York Times";
     
     _manager = [[APIManager alloc] init];
     _manager.communicator = [[APICommunicator alloc] init];
@@ -50,6 +51,18 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)customSetup
+{
+    self.title = @"New York Times";
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.menuButton setTarget: self.revealViewController];
+        [self.menuButton setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer: self.revealViewController.panGestureRecognizer];
+    }
 }
 
 - (void)didReceive:(NSArray *)entries
