@@ -44,7 +44,11 @@
     _manager.communicator = [[APICommunicator alloc] init];
     _manager.communicator.delegate = _manager;
     _manager.delegate = self;
-    [_manager fetchNews];
+    if (self.category) {
+        [_manager fetchNews:self.category];
+    } else {
+        [_manager fetchNews];
+    }
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

@@ -10,4 +10,6 @@
 
 @interface ABCNewsTableViewController : UITableViewController
 
+@property (nonatomic, strong) NSString *category;
+
 @end

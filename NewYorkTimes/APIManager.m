@@ -13,7 +13,12 @@
 @implementation APIManager
 - (void)fetchNews
 {
-        [self.communicator getNews];
+    [self.communicator getNews];
+}
+
+- (void)fetchNews: (NSString*)category
+{
+    [self.communicator getNews:category];
 }
 
 - (void)fetchCategories

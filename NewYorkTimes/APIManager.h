@@ -18,5 +18,6 @@
 @property (weak, nonatomic) NSObject<APIManagerDelegate> *delegate;
 
 - (void)fetchNews;
+- (void)fetchNews: (NSString*)category;
 - (void)fetchCategories;
 @end
