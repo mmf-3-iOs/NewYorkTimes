@@ -14,6 +14,7 @@
 #import "EntryItem.h"
 #import "APIManager.h"
 #import "APICommunicator.h"
+#import "NetworkOperations.h"
 
 
 @interface ABCNewsTableViewController () <APIManagerDelegate> {
@@ -115,6 +116,9 @@
     [cell.date setText:entry.date];
     [cell.text setText:entry.shortText];
     [cell.section setText:entry.section];
+    if (!cell.image.image) {
+        [NetworkOperations getImageFromUrl:entry.urlThumbImage forUIImageView:cell.image];
+    }
     
     return cell;
 }

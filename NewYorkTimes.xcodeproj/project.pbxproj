@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		841787891A0FFC6900B1F05F /* NetworkOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 841787881A0FFC6900B1F05F /* NetworkOperations.m */; };
 		843815351A0781450083A2F6 /* EntryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 843815341A0781450083A2F6 /* EntryItem.m */; };
 		843815371A0781500083A2F6 /* CategoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 843815361A0781500083A2F6 /* CategoryItem.m */; };
 		848D79761A02CCEA00896882 /* EntriesBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D796D1A02CCEA00896882 /* EntriesBuilder.m */; };
@@ -47,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		841787871A0FFC6900B1F05F /* NetworkOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkOperations.h; sourceTree = "<group>"; };
+		841787881A0FFC6900B1F05F /* NetworkOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkOperations.m; sourceTree = "<group>"; };
 		843815341A0781450083A2F6 /* EntryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryItem.m; sourceTree = "<group>"; };
 		843815361A0781500083A2F6 /* CategoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryItem.m; sourceTree = "<group>"; };
 		848D796C1A02CCEA00896882 /* EntriesBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntriesBuilder.h; sourceTree = "<group>"; };
@@ -132,6 +135,8 @@
 				848D79751A02CCEA00896882 /* APIManagerDelegate.h */,
 				848D79731A02CCEA00896882 /* APIManager.h */,
 				848D79741A02CCEA00896882 /* APIManager.m */,
+				841787871A0FFC6900B1F05F /* NetworkOperations.h */,
+				841787881A0FFC6900B1F05F /* NetworkOperations.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -384,6 +389,7 @@
 				843815371A0781500083A2F6 /* CategoryItem.m in Sources */,
 				84C6A5331A07C6D400E79E90 /* SWRevealViewController.m in Sources */,
 				843815351A0781450083A2F6 /* EntryItem.m in Sources */,
+				841787891A0FFC6900B1F05F /* NetworkOperations.m in Sources */,
 				848D79791A02CCEA00896882 /* APIManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
