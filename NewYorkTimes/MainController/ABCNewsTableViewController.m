@@ -83,7 +83,7 @@
                           message:[error localizedRecoverySuggestion]
                           delegate:nil
                           cancelButtonTitle:NSLocalizedString(@"Ok", @"")
-             git              otherButtonTitles:nil];
+                          otherButtonTitles:nil];
     
     [alert show];
     NSLog(@"Error %@; %@", error, [error localizedDescription]);
