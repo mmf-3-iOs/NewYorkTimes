@@ -17,7 +17,7 @@
 #import "NetworkOperations.h"
 
 
-@interface ABCNewsTableViewController () <APIManagerDelegate> {
+@interface ABCNewsTableViewController () <APIManagerDelegate, UIGestureRecognizerDelegate> {
     NSArray *_entries;
     APIManager *_manager;
 }
@@ -39,18 +39,7 @@
 {
     [super viewDidLoad];
     [self customSetup];
-    
-    
-    _manager = [[APIManager alloc] init];
-    _manager.communicator = [[APICommunicator alloc] init];
-    _manager.communicator.delegate = _manager;
-    _manager.delegate = self;
-    if (self.category) {
-        [_manager fetchNews:self.category];
-    } else {
-        [_manager fetchNews];
-    }
-    
+    [self getData];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -68,6 +57,35 @@
         [self.menuButton setAction: @selector( revealToggle: )];
         [self.view addGestureRecognizer: self.revealViewController.panGestureRecognizer];
     }
+    UIPanGestureRecognizer *panGRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveViewWithGestureRecognizer:)];
+    [self.view addGestureRecognizer:panGRecognizer];
+    panGRecognizer.delegate = self;
+}
+
+- (void)getData
+{
+    _manager = [[APIManager alloc] init];
+    _manager.communicator = [[APICommunicator alloc] init];
+    _manager.communicator.delegate = _manager;
+    _manager.delegate = self;
+    if (self.category) {
+        [_manager fetchNews:self.category];
+    } else {
+        [_manager fetchNews];
+    }
+}
+
+- (void)moveViewWithGestureRecognizer:(UIPanGestureRecognizer *)panGestureRecognizer
+{
+    if(panGestureRecognizer.state == UIGestureRecognizerStateEnded && [self gestureRecognizerShouldBegin:panGestureRecognizer]) {
+        NSLog(@"WORKS");
+        [self getData];
+    }
+}
+
+- (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)panGestureRecognizer {
+    CGPoint velocity = [panGestureRecognizer velocityInView:self.view];
+    return fabs(velocity.y) > fabs(velocity.x);
 }
 
 - (void)didReceive:(NSArray *)entries

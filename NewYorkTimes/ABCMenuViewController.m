@@ -56,6 +56,14 @@
 
 - (void)fetchingFailedWithError:(NSError *)error
 {
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:[error localizedDescription]
+                          message:[error localizedRecoverySuggestion]
+                          delegate:nil
+                          cancelButtonTitle:NSLocalizedString(@"Ok", @"")
+                          otherButtonTitles:nil];
+    
+    [alert show];
     NSLog(@"Error %@; %@", error, [error localizedDescription]);
 }
 
