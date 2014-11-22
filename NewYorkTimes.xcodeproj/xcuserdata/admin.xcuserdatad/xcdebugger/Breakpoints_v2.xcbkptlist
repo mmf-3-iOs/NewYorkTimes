@@ -97,5 +97,113 @@
             endingLineNumber = "9">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewYorkTimes/MainController/ABCNewsTableViewController.m"
+            timestampString = "438355106.903787"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "@interface ABCNewsTableViewController()"
+            landmarkType = "2">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ABCNewsTableViewController menuButton]"
+                  moduleName = "NewYorkTimes"
+                  urlString = "file:///Users/admin/Desktop/NewYorkTimesProject/NewYorkTimes/NewYorkTimes/MainController/ABCNewsTableViewController.m"
+                  timestampString = "438355283.396454"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ABCNewsTableViewController setMenuButton:]"
+                  moduleName = "NewYorkTimes"
+                  urlString = "file:///Users/admin/Desktop/NewYorkTimesProject/NewYorkTimes/NewYorkTimes/MainController/ABCNewsTableViewController.m"
+                  timestampString = "438355283.396768"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewYorkTimes/MainController/ABCNewsTableViewController.m"
+            timestampString = "438355215.906455"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "-customSetup"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewYorkTimes/MainController/ABCNewsTableViewController.m"
+            timestampString = "438355325.354817"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "menuButton"
+            landmarkType = "19">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ABCNewsTableViewController menuButton]"
+                  moduleName = "NewYorkTimes"
+                  urlString = "file:///Users/admin/Desktop/NewYorkTimesProject/NewYorkTimes/NewYorkTimes/MainController/ABCNewsTableViewController.m"
+                  timestampString = "438355325.356563"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ABCNewsTableViewController setMenuButton:]"
+                  moduleName = "NewYorkTimes"
+                  urlString = "file:///Users/admin/Desktop/NewYorkTimesProject/NewYorkTimes/NewYorkTimes/MainController/ABCNewsTableViewController.m"
+                  timestampString = "438355325.356884"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
