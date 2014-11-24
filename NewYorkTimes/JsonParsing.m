@@ -10,16 +10,26 @@
 
 @interface JsonParsing() {
     NSData *_data;
-    JsonParsingCompletionBlock handler;
+    JsonParsingCompletionBlock _handler;
+    NSOperationQueue *_queue;
 }
 
 @end
 
 @implementation JsonParsing
 
--(void)initWithData:(NSData *)data completionHandler:(JsonParsingCompletionBlock)completionHandler
+-(void)initWithData:(NSData *)data queue:(NSOperationQueue*)queue completionHandler:(JsonParsingCompletionBlock)completionHandler
 {
-   // NSBlockOperation onComplete = [NSBlockOperation blockOperationWithBlock:<#^(void)block#>]
+    _data = data;
+    _queue = queue;
+    _handler = completionHandler;
+}
+
+-(void)main {
+    NSBlockOperation *completion = [NSBlockOperation blockOperationWithBlock: ^{
+        //_handler(entries, error);
+    }];
+    [_queue addOperation:completion];
 }
 
 @end

@@ -12,6 +12,6 @@ typedef void (^JsonParsingCompletionBlock)(NSArray *entries, NSError *error);
 
 @interface JsonParsing : NSOperation
 
-- (void)initWithData:(NSData *)data completionHandler:(JsonParsingCompletionBlock)completionHandler;
+- (void)initWithData:(NSData *)data queue:(NSOperationQueue*)queue completionHandler:(JsonParsingCompletionBlock)completionHandler;
 
 @end
