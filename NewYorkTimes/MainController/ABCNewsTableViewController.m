@@ -17,7 +17,7 @@
 #import "NetworkOperations.h"
 
 
-@interface ABCNewsTableViewController () <APIManagerDelegate, UIGestureRecognizerDelegate> {
+@interface ABCNewsTableViewController () <APIManagerDelegate> {
     NSArray *_entries;
     APIManager *_manager;
 }
@@ -39,6 +39,8 @@
 {
     [super viewDidLoad];
     [self customSetup];
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(getData) forControlEvents:UIControlEventValueChanged];
     _manager = [[APIManager alloc] init];
     _manager.communicator = [[APICommunicator alloc] init];
     _manager.communicator.delegate = _manager;
@@ -61,9 +63,6 @@
         [self.menuButton setAction: @selector( revealToggle: )];
         [self.view addGestureRecognizer: self.revealViewController.panGestureRecognizer];
     }
-//    UIPanGestureRecognizer *panGRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveViewWithGestureRecognizer:)];
-//    [self.view addGestureRecognizer:panGRecognizer];
-//    panGRecognizer.delegate = self;
 }
 
 - (void)getData
@@ -75,23 +74,11 @@
     }
 }
 
-- (void)moveViewWithGestureRecognizer:(UIPanGestureRecognizer *)panGestureRecognizer
-{
-    if(panGestureRecognizer.state == UIGestureRecognizerStateEnded && [self gestureRecognizerShouldBegin:panGestureRecognizer]) {
-        NSLog(@"WORKS");
-        [self getData];
-    }
-}
-
-- (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)panGestureRecognizer {
-    CGPoint velocity = [panGestureRecognizer velocityInView:self.view];
-    return fabs(velocity.y) > fabs(velocity.x);
-}
-
 - (void)didReceive:(NSArray *)entries
 {
     _entries = entries;
     [self.tableView reloadData];
+    [self.refreshControl endRefreshing];
 }
 
 - (void)fetchingFailedWithError:(NSError *)error
@@ -142,9 +129,10 @@
     [cell.date setText:entry.date];
     [cell.text setText:entry.shortText];
     [cell.section setText:entry.section];
-    if (!cell.image.image) {
+    //if (!cell.image.image) {
+    cell.image.image = nil;
         [NetworkOperations getImageFromUrl:entry.urlThumbImage forUIImageView:cell.image];
-    }
+    //}
     
     return cell;
 }

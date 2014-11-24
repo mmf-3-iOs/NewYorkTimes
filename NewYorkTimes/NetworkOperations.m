@@ -8,10 +8,19 @@
 
 #import "NetworkOperations.h"
 
+@interface NetworkOperations ()
+{
+    NSURLSessionConfiguration *sessionConfig;
+}
+@end
+
 @implementation NetworkOperations
+
+static NSURLSessionConfiguration *sessionConfig ;
+
 + (void)getImageFromUrl:(NSString*)url forUIImageView:(UIImageView*)imVw
 {
-    NSURLSessionConfiguration *sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
+    sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session =  [NSURLSession sessionWithConfiguration:sessionConfig  delegate:self delegateQueue:nil];
     NSURLSessionDownloadTask *getImageTask = [session downloadTaskWithURL:[NSURL URLWithString:url] completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
         UIImage *downloadedImage =

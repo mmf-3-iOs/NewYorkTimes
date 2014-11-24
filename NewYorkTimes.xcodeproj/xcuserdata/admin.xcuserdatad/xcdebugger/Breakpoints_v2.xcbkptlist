@@ -150,22 +150,6 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NewYorkTimes/MainController/ABCNewsTableViewController.m"
-            timestampString = "438527784.091829"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "-customSetup"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "NewYorkTimes/MainController/ABCNewsTableViewController.m"
             timestampString = "438355325.354817"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
