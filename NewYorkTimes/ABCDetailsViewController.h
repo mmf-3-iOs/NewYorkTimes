@@ -11,15 +11,6 @@
 
 @interface ABCDetailsViewController : UIViewController
 
-@property (nonatomic, strong) IBOutlet UILabel *newsTitleLabel;
-@property (nonatomic, strong) IBOutlet UILabel *dateLabel;
-@property (nonatomic, strong) IBOutlet UIImageView *newsImageView;
-@property (nonatomic, strong) IBOutlet UITextView *newsTextView;
-
-//@property (nonatomic, strong) NSString *newsTitle;
-//@property (nonatomic, strong) NSString *newsPublishDate;
-//@property (nonatomic, strong) NSString *newsFullText;
-//@property (nonatomic, strong) UIImage *newsImage;
 @property (nonatomic, strong) EntryItem *entry;
 
 @end

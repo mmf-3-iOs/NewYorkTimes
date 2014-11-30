@@ -14,12 +14,6 @@
 
 @implementation ABCDetailsViewController
 
-@synthesize newsTitleLabel;
-@synthesize newsImageView;
-@synthesize dateLabel;
-@synthesize newsTextView;
-@synthesize entry;
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -32,10 +26,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    newsTitleLabel.text = entry.title;
-    dateLabel.text = entry.date;
-    newsTextView.text = entry.fullText;
-    //newsImageView.image = news.newsImage;
+    
+    //Title
+    self.title = _entry.title;
+    
+    // Load page from web
+    UIWebView* webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:webView];
+    
+    NSURL* url = [NSURL URLWithString:[_entry.url stringByReplacingOccurrencesOfString:@"www." withString:@"mobile."]];
+    NSURLRequest* request = [NSURLRequest requestWithURL:url];
+    
+    [webView loadRequest:request];
 }
 
 - (void)didReceiveMemoryWarning

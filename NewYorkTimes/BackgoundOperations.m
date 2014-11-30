@@ -73,6 +73,8 @@ static BackgroundOperations *_sharedManager = nil;
                                 entry.fullText = [entryDic valueForKey:key];
                             } else if ([key  isEqual: @"title"]) {
                                 entry.title = [entryDic valueForKey:key];
+                            } else if ([key  isEqual: @"url"]) {
+                                entry.url = [entryDic valueForKey:key];
                             } else if ([key  isEqual: @"thumbnail_standard"]) {
                                 entry.urlThumbImage = [entryDic valueForKey:key];
                                 entry.urlFullImage = [entryDic valueForKey:key];
