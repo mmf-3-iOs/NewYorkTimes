@@ -37,11 +37,17 @@
     NSString *apiKey = @"f2e766bfe17b4503a0ad499f800d4d0e%3A10%3A69971684";
     NSString *url = [NSString stringWithFormat:@"http://api.nytimes.com/svc/news/v3/content/section-list.json?api-key=%@", apiKey];
     
-    [[BackgroundOperations sharedInstance] downloadFromUrl:url andFetchInMode:JSONFetchDataModeCategories withCompletionHandler:^(NSArray *array, NSError *error) {
+    [[BackgroundOperations sharedInstance] downloadFromUrl:url andFetchInMode:JSONFetchDataModeCategories withCompletionHandler:^(NSMutableArray *array, NSError *error) {
         if (error) {
             [self showFailAlert:error];
         } else {
-            _categories = array;
+            // Add entry for displaying news from all categories
+            NSMutableArray *tempArray = array;
+            CategoryItem *allCategory = [[CategoryItem alloc] init];
+            allCategory.title = @"All categories";
+            allCategory.forSearch = @"all";
+            [tempArray insertObject:allCategory atIndex:0];
+            _categories = tempArray;
             [self.tableView reloadData];
         }
     }];

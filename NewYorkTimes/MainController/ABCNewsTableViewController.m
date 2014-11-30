@@ -57,7 +57,7 @@
     NSString *apiKey = @"f2e766bfe17b4503a0ad499f800d4d0e%3A10%3A69971684";
     NSString *url = [NSString stringWithFormat:@"http://api.nytimes.com/svc/news/v3/content/all/%@/.json?api-key=%@", (self.category) ? [self.category stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] : @"all", apiKey];
     
-    [[BackgroundOperations sharedInstance] downloadFromUrl:url andFetchInMode:JSONFetchDataModeNews withCompletionHandler:^(NSArray *array, NSError *error) {
+    [[BackgroundOperations sharedInstance] downloadFromUrl:url andFetchInMode:JSONFetchDataModeNews withCompletionHandler:^(NSMutableArray *array, NSError *error) {
         if (error) {
             [self showFailAlert:error];
         } else {

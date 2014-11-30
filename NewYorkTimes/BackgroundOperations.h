@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 typedef void(^DataDownloadCompletionHanlder)(NSData* data, NSError* error);
-typedef void(^JSONFetchCompletionHanlder)(NSArray* array, NSError* error);
+typedef void(^JSONFetchCompletionHanlder)(NSMutableArray* array, NSError* error);
 
 typedef enum JSONFetchDataMode
 {
