@@ -14,7 +14,7 @@
 #import "EntryItem.h"
 #import "APIManager.h"
 #import "APICommunicator.h"
-#import "NetworkOperations.h"
+#import "BackgroundOperations.h"
 
 
 @interface ABCNewsTableViewController () <APIManagerDelegate> {
@@ -131,7 +131,9 @@
     [cell.section setText:entry.section];
     //if (!cell.image.image) {
     cell.image.image = nil;
-        [NetworkOperations getImageFromUrl:entry.urlThumbImage forUIImageView:cell.image];
+        [[BackgroundOperations sharedInstance] downloadAsyncData:entry.urlThumbImage withCompletionHandler:^(NSData *data, NSError *error) {
+            [cell.image setImage:[UIImage imageWithData:data]];
+        }];
     //}
     
     return cell;
