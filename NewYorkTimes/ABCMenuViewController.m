@@ -11,12 +11,10 @@
 #import "ABCNewsTableViewController.h"
 
 #import "CategoryItem.h"
-#import "APICommunicator.h"
-#import "APIManager.h"
+#import "BackgroundOperations.h"
 
-@interface ABCMenuViewController () <APIManagerDelegate> {
+@interface ABCMenuViewController () {
     NSArray *_categories;
-    APIManager *_manager;
 }
 
 @end
@@ -36,11 +34,17 @@
 {
     [super viewDidLoad];
     
-    _manager = [[APIManager alloc] init];
-    _manager.communicator = [[APICommunicator alloc] init];
-    _manager.communicator.delegate = _manager;
-    _manager.delegate = self;
-    [_manager fetchCategories];
+    NSString *apiKey = @"f2e766bfe17b4503a0ad499f800d4d0e%3A10%3A69971684";
+    NSString *url = [NSString stringWithFormat:@"http://api.nytimes.com/svc/news/v3/content/section-list.json?api-key=%@", apiKey];
+    
+    [[BackgroundOperations sharedInstance] downloadFromUrl:url andFetchInMode:JSONFetchDataModeCategories withCompletionHandler:^(NSArray *array, NSError *error) {
+        if (error) {
+            [self showFailAlert:error];
+        } else {
+            _categories = array;
+            [self.tableView reloadData];
+        }
+    }];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -48,13 +52,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)didReceive:(NSArray *)entries
-{
-    _categories = entries;
-    [self.tableView reloadData];
-}
-
-- (void)fetchingFailedWithError:(NSError *)error
+- (void)showFailAlert:(NSError *)error
 {
     UIAlertView *alert = [[UIAlertView alloc]
                           initWithTitle:[error localizedDescription]

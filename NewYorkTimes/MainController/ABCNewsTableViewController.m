@@ -12,39 +12,21 @@
 #import "SWRevealViewController.h"
 
 #import "EntryItem.h"
-#import "APIManager.h"
-#import "APICommunicator.h"
 #import "BackgroundOperations.h"
 
 
-@interface ABCNewsTableViewController () <APIManagerDelegate> {
+@interface ABCNewsTableViewController () {
     NSArray *_entries;
-    APIManager *_manager;
 }
 @property (nonatomic) IBOutlet UIBarButtonItem* menuButton;
 @end
 
 @implementation ABCNewsTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self customSetup];
-    self.refreshControl = [[UIRefreshControl alloc] init];
-    [self.refreshControl addTarget:self action:@selector(getData) forControlEvents:UIControlEventValueChanged];
-    _manager = [[APIManager alloc] init];
-    _manager.communicator = [[APICommunicator alloc] init];
-    _manager.communicator.delegate = _manager;
-    _manager.delegate = self;
     [self getData];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -56,7 +38,12 @@
 - (void)customSetup
 {
     self.title = @"New York Times";
-    SWRevealViewController *revealViewController = self.revealViewController;
+    
+    // Refrashing
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(getData) forControlEvents:UIControlEventValueChanged];    SWRevealViewController *revealViewController = self.revealViewController;
+    
+    // Sidepanel
     if ( revealViewController )
     {
         [self.menuButton setTarget: self.revealViewController];
@@ -67,21 +54,21 @@
 
 - (void)getData
 {
-    if (self.category) {
-        [_manager fetchNews:self.category];
-    } else {
-        [_manager fetchNews];
-    }
+    NSString *apiKey = @"f2e766bfe17b4503a0ad499f800d4d0e%3A10%3A69971684";
+    NSString *url = [NSString stringWithFormat:@"http://api.nytimes.com/svc/news/v3/content/all/%@/.json?api-key=%@", (self.category) ? [self.category stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] : @"all", apiKey];
+    
+    [[BackgroundOperations sharedInstance] downloadFromUrl:url andFetchInMode:JSONFetchDataModeNews withCompletionHandler:^(NSArray *array, NSError *error) {
+        if (error) {
+            [self showFailAlert:error];
+        } else {
+            _entries = array;
+            [self.tableView reloadData];
+            [self.refreshControl endRefreshing];
+        }
+    }];
 }
 
-- (void)didReceive:(NSArray *)entries
-{
-    _entries = entries;
-    [self.tableView reloadData];
-    [self.refreshControl endRefreshing];
-}
-
-- (void)fetchingFailedWithError:(NSError *)error
+- (void)showFailAlert:(NSError *)error
 {
     UIAlertView *alert = [[UIAlertView alloc]
                           initWithTitle:[error localizedDescription]

@@ -110,4 +110,25 @@ static BackgroundOperations *_sharedManager = nil;
         });
     });
 }
+
+- (void)downloadFromUrl:(NSString *)url andFetchInMode:(JSONFetchDataMode)mode withCompletionHandler:(JSONFetchCompletionHanlder)handler
+{
+    __block NSError *localError = nil;
+    __block NSArray *array = nil;
+    [self downloadAsyncData:url withCompletionHandler:^(NSData *data, NSError *error) {
+        if (error == nil) {
+            [self fetchAsyncData:data mode:mode withCompletionHandler:^(NSArray *data, NSError *error) {
+                if (error != nil) {
+                    localError = error;
+                } else {
+                    array = data;
+                }
+                handler(array, localError);
+            }];
+        } else {
+            localError = error;
+            handler(array, localError);
+        }
+    }];
+}
 @end

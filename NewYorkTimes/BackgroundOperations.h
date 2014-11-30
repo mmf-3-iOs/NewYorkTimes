@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 typedef void(^DataDownloadCompletionHanlder)(NSData* data, NSError* error);
-typedef void(^JSONFetchCompletionHanlder)(NSArray* data, NSError* error);
+typedef void(^JSONFetchCompletionHanlder)(NSArray* array, NSError* error);
 
 typedef enum JSONFetchDataMode
 {
@@ -22,4 +22,5 @@ typedef enum JSONFetchDataMode
 + (BackgroundOperations*)sharedInstance;
 - (void)downloadAsyncData:(NSString*)url withCompletionHandler:(DataDownloadCompletionHanlder)handler;
 - (void)fetchAsyncData:(NSData*)data mode:(JSONFetchDataMode)mode withCompletionHandler:(JSONFetchCompletionHanlder)handler;
+- (void)downloadFromUrl:(NSString*)url andFetchInMode:(JSONFetchDataMode)mode withCompletionHandler:(JSONFetchCompletionHanlder)handler;
 @end
