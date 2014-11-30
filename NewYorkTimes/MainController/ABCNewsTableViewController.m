@@ -116,12 +116,13 @@
     [cell.date setText:entry.date];
     [cell.text setText:entry.shortText];
     [cell.section setText:entry.section];
-    //if (!cell.image.image) {
+
     cell.image.image = nil;
+    if (entry.urlThumbImage) {
         [[BackgroundOperations sharedInstance] downloadAsyncData:entry.urlThumbImage withCompletionHandler:^(NSData *data, NSError *error) {
             [cell.image setImage:[UIImage imageWithData:data]];
         }];
-    //}
+    }
     
     return cell;
 }
