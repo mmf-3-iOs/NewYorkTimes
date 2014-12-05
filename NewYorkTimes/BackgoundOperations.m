@@ -32,12 +32,14 @@ static BackgroundOperations *_sharedManager = nil;
 
 - (id)init
 {
-    self = [super init];
-    
-    queue = dispatch_queue_create("com.mmf-3-iOs.NewYorkTimes", DISPATCH_QUEUE_CONCURRENT);
-    session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-    
-    return self;
+    if ((self = [super init])) {
+        queue = dispatch_queue_create("com.mmf-3-iOs.NewYorkTimes", DISPATCH_QUEUE_CONCURRENT);
+        session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+        
+        return self;
+    } else {
+        return nil;
+    }
 }
 
 - (void)downloadAsyncData:(NSString *)url withCompletionHandler:(DataDownloadCompletionHanlder)handler
