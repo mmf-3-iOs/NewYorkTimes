@@ -33,11 +33,22 @@
     // Load page from web
     UIWebView* webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:webView];
+    webView.delegate = self;
     
     NSURL* url = [NSURL URLWithString:[_entry.url stringByReplacingOccurrencesOfString:@"www." withString:@"mobile."]];
     NSURLRequest* request = [NSURLRequest requestWithURL:url];
     
     [webView loadRequest:request];
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 
 - (void)didReceiveMemoryWarning

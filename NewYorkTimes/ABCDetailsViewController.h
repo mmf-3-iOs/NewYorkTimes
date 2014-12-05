@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "EntryItem.h"
 
-@interface ABCDetailsViewController : UIViewController
+@interface ABCDetailsViewController : UIViewController <UIWebViewDelegate>
 
 @property (nonatomic, strong) EntryItem *entry;
 
