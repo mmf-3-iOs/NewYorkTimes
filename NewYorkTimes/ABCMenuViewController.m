@@ -17,6 +17,7 @@
     NSArray *_categories;
 }
 
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicatorView;
 @end
 
 @implementation ABCMenuViewController
@@ -49,6 +50,7 @@
             [tempArray insertObject:allCategory atIndex:0];
             _categories = tempArray;
             [self.tableView reloadData];
+            [self.activityIndicatorView stopAnimating];
         }
     }];
     // Uncomment the following line to preserve selection between presentations.

@@ -73,6 +73,9 @@
                             <outlet property="delegate" destination="cIz-Oz-vhi" id="YhZ-nw-3lx"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="hOz-Jv-JaE" id="fqs-kF-Nmg"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZJ-Qk-b99" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

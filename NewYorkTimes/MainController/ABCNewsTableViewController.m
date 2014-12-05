@@ -144,6 +144,7 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    // Uploading new items on scrolling down
     if (indexPath.row == [_entries count] - 1) {
         pageNumber++;
         [self getData];
