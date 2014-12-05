@@ -51,6 +51,11 @@
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
