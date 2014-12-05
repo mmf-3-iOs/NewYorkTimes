@@ -150,11 +150,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NewYorkTimes/MainController/ABCNewsTableViewController.m"
-            timestampString = "439058690.080994"
+            timestampString = "439497993.755257"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "menuButton"
             landmarkType = "19">
             <Locations>

@@ -17,11 +17,24 @@
 
 @interface ABCNewsTableViewController () {
     NSArray *_entries;
+    NSInteger pageNumber;
 }
+
 @property (nonatomic) IBOutlet UIBarButtonItem* menuButton;
 @end
 
 @implementation ABCNewsTableViewController
+
+- (id)init
+{
+    if ((self = [super init])) {
+        pageNumber = 0;
+        _entries = [[NSArray alloc] init];
+        return self;
+    } else {
+        return nil;
+    }
+}
 
 - (void)viewDidLoad
 {
@@ -55,13 +68,15 @@
 - (void)getData
 {
     NSString *apiKey = @"f2e766bfe17b4503a0ad499f800d4d0e%3A10%3A69971684";
-    NSString *url = [NSString stringWithFormat:@"http://api.nytimes.com/svc/news/v3/content/all/%@/.json?api-key=%@", (self.category) ? [self.category stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] : @"all", apiKey];
+    NSString *url = [NSString stringWithFormat:@"http://api.nytimes.com/svc/news/v3/content/all/%@/.json?offset=%ld&api-key=%@", (self.category) ? [self.category stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] : @"all", 20*pageNumber + 1, apiKey];
     
     [[BackgroundOperations sharedInstance] downloadFromUrl:url andFetchInMode:JSONFetchDataModeNews withCompletionHandler:^(NSMutableArray *array, NSError *error) {
         if (error) {
             [self showFailAlert:error];
         } else {
-            _entries = array;
+            NSMutableArray *tempArray = [[NSMutableArray alloc] initWithArray:_entries];
+            [tempArray addObjectsFromArray:array];
+            _entries = tempArray;
             [self.tableView reloadData];
             [self.refreshControl endRefreshing];
         }
@@ -125,6 +140,14 @@
     }
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == [_entries count] - 1) {
+        pageNumber++;
+        [self getData];
+    }
 }
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
