@@ -72,14 +72,12 @@ static BackgroundOperations *_sharedManager = nil;
                         for (NSString *key in entryDic) {
                             if ([key  isEqual: @"abstract"]) {
                                 entry.shortText = [entryDic valueForKey:key];
-                                entry.fullText = [entryDic valueForKey:key];
                             } else if ([key  isEqual: @"title"]) {
                                 entry.title = [entryDic valueForKey:key];
                             } else if ([key  isEqual: @"url"]) {
                                 entry.url = [entryDic valueForKey:key];
                             } else if ([key  isEqual: @"thumbnail_standard"]) {
                                 entry.urlThumbImage = [entryDic valueForKey:key];
-                                entry.urlFullImage = [entryDic valueForKey:key];
                             } else if ([key isEqual:@"created_date"]) {
                                 entry.date = [entryDic valueForKey:key];
                             } else if ([key isEqual:@"section"]) {

@@ -14,8 +14,6 @@
 @property (strong, nonatomic) NSString *section;
 @property (strong, nonatomic) NSString *url;
 @property (strong, nonatomic) NSString *urlThumbImage;
-@property (strong, nonatomic) NSString *urlFullImage;
 @property (strong, nonatomic) NSString *shortText;
-@property (strong, nonatomic) NSString *fullText;
 
 @end
