@@ -10,6 +10,7 @@
 
 @interface ABCNewsTableViewController : UITableViewController
 
+@property (nonatomic, strong) NSString *categoryName;
 @property (nonatomic, strong) NSString *category;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 
