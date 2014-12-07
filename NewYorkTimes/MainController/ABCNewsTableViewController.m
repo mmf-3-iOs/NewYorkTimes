@@ -40,7 +40,7 @@
 {
     [super viewDidLoad];
     [self customSetup];
-    [self getData];
+    [self getData:YES];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -54,7 +54,7 @@
     
     // Refrashing
     self.refreshControl = [[UIRefreshControl alloc] init];
-    [self.refreshControl addTarget:self action:@selector(getData) forControlEvents:UIControlEventValueChanged];    SWRevealViewController *revealViewController = self.revealViewController;
+    [self.refreshControl addTarget:self action:@selector(refreshEntries) forControlEvents:UIControlEventValueChanged];    SWRevealViewController *revealViewController = self.revealViewController;
     
     // Sidepanel
     if ( revealViewController )
@@ -65,7 +65,7 @@
     }
 }
 
-- (void)getData
+- (void)getData:(BOOL)isAdd
 {
     NSString *apiKey = @"f2e766bfe17b4503a0ad499f800d4d0e%3A10%3A69971684";
     NSString *url = [NSString stringWithFormat:@"http://api.nytimes.com/svc/news/v3/content/all/%@/.json?offset=%ld&api-key=%@", (self.category) ? [self.category stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] : @"all", 20*pageNumber + 1, apiKey];
@@ -74,13 +74,23 @@
         if (error) {
             [self showFailAlert:error];
         } else {
-            NSMutableArray *tempArray = [[NSMutableArray alloc] initWithArray:_entries];
-            [tempArray addObjectsFromArray:array];
-            _entries = tempArray;
+            if (isAdd) {
+                NSMutableArray *tempArray = [[NSMutableArray alloc] initWithArray:_entries];
+                [tempArray addObjectsFromArray:array];
+                _entries = tempArray;
+            } else {
+                _entries = array;
+            }
+            
             [self.tableView reloadData];
             [self.refreshControl endRefreshing];
         }
     }];
+}
+
+- (void)refreshEntries
+{
+    [self getData:NO];
 }
 
 - (void)showFailAlert:(NSError *)error
@@ -147,7 +157,7 @@
     // Uploading new items on scrolling down
     if (indexPath.row == [_entries count] - 1) {
         pageNumber++;
-        [self getData];
+        [self getData:YES];
     }
 }
 
