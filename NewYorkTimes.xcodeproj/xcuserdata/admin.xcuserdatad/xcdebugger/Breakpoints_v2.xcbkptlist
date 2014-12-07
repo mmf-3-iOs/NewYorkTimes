@@ -104,43 +104,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NewYorkTimes/MainController/ABCNewsTableViewController.m"
-            timestampString = "439058690.080994"
+            timestampString = "439673861.770043"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "@interface ABCNewsTableViewController()"
-            landmarkType = "2">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ABCNewsTableViewController menuButton]"
-                  moduleName = "NewYorkTimes"
-                  urlString = "file:///Users/admin/Desktop/NewYorkTimesProject/NewYorkTimes/NewYorkTimes/MainController/ABCNewsTableViewController.m"
-                  timestampString = "438355283.396454"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "24">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ABCNewsTableViewController setMenuButton:]"
-                  moduleName = "NewYorkTimes"
-                  urlString = "file:///Users/admin/Desktop/NewYorkTimesProject/NewYorkTimes/NewYorkTimes/MainController/ABCNewsTableViewController.m"
-                  timestampString = "438355283.396768"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "31">
-               </Location>
-            </Locations>
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "-customSetup"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -150,41 +120,57 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NewYorkTimes/MainController/ABCNewsTableViewController.m"
-            timestampString = "439497993.755257"
+            timestampString = "439673861.770043"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "menuButton"
-            landmarkType = "19">
+            startingLineNumber = "154"
+            endingLineNumber = "154"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewYorkTimes/MainController/ABCNewsTableViewController.m"
+            timestampString = "439673861.770043"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "5">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "-[ABCNewsTableViewController menuButton]"
+                  symbolName = "-[ABCNewsTableViewController tableView:cellForRowAtIndexPath:]"
                   moduleName = "NewYorkTimes"
-                  urlString = "file:///Users/admin/Desktop/NewYorkTimesProject/NewYorkTimes/NewYorkTimes/MainController/ABCNewsTableViewController.m"
-                  timestampString = "438355325.356563"
+                  urlString = "file:///Users/admin/Desktop/Projects/NewYorkTimes/NewYorkTimes/MainController/ABCNewsTableViewController.m"
+                  timestampString = "439673423.754857"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "24">
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "1292">
                </Location>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "-[ABCNewsTableViewController setMenuButton:]"
+                  symbolName = "__62-[ABCNewsTableViewController tableView:cellForRowAtIndexPath:]_block_invoke"
                   moduleName = "NewYorkTimes"
-                  urlString = "file:///Users/admin/Desktop/NewYorkTimesProject/NewYorkTimes/NewYorkTimes/MainController/ABCNewsTableViewController.m"
-                  timestampString = "438355325.356884"
+                  urlString = "file:///Users/admin/Desktop/Projects/NewYorkTimes/NewYorkTimes/MainController/ABCNewsTableViewController.m"
+                  timestampString = "439673423.755303"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "31">
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "70">
                </Location>
             </Locations>
          </BreakpointContent>

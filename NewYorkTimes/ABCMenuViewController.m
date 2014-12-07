@@ -113,6 +113,7 @@
     ABCNewsTableViewController* destView = [navController childViewControllers].firstObject;
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     CategoryItem *category = [_categories objectAtIndex:indexPath.row];
+    destView.categoryName = category.title;
     destView.category = category.forSearch;
 }
 

@@ -13,11 +13,13 @@
 
 #import "EntryItem.h"
 #import "BackgroundOperations.h"
+#import "ImageCache.h"
 
 
 @interface ABCNewsTableViewController () {
     NSArray *_entries;
     NSInteger pageNumber;
+    ImageCache *_cache;
 }
 
 @property (nonatomic) IBOutlet UIBarButtonItem* menuButton;
@@ -50,7 +52,10 @@
 
 - (void)customSetup
 {
-    self.title = @"New York Times";
+    //self.title = @"New York Times";
+    self.title = (self.categoryName)?self.categoryName:@"New York Times";
+    
+    _cache =[ImageCache sharedInstance];
     
     // Refrashing
     self.refreshControl = [[UIRefreshControl alloc] init];
@@ -143,10 +148,17 @@
     [cell.section setText:entry.section];
 
     cell.image.image = nil;
-    if (entry.urlThumbImage) {
-        [[BackgroundOperations sharedInstance] downloadAsyncData:entry.urlThumbImage withCompletionHandler:^(NSData *data, NSError *error) {
-            [cell.image setImage:[UIImage imageWithData:data]];
-        }];
+    if (entry.urlThumbImage && !([entry.urlThumbImage isEqualToString:@""])) {
+        NSData *image = [_cache getImageWithURL:entry.urlThumbImage];
+        if (image) {
+            [cell.image setImage:[UIImage imageWithData:image]];
+        } else {
+            [[BackgroundOperations sharedInstance] downloadAsyncData:entry.urlThumbImage withCompletionHandler:^(NSData *data, NSError *error) {
+                [_cache addImage:data withURL:entry.urlThumbImage];
+
+                [cell.image setImage:[UIImage imageWithData:data]];
+            }];
+        }
     }
     
     return cell;
