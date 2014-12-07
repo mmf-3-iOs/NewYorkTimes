@@ -60,7 +60,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)showFailAlert:(NSError *)error
+- (void)showFailAlert:(NSError *)error 
 {
     UIAlertView *alert = [[UIAlertView alloc]
                           initWithTitle:[error localizedDescription]
