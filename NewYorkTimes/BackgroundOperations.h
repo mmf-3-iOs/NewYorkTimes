@@ -14,7 +14,8 @@ typedef void(^JSONFetchCompletionHanlder)(NSMutableArray* array, NSError* error)
 typedef enum JSONFetchDataMode
 {
     JSONFetchDataModeNews,
-    JSONFetchDataModeCategories
+    JSONFetchDataModeCategories,
+    JSONFetchDataModeArticleSearch
 }JSONFetchDataMode;
 
 

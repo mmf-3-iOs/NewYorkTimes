@@ -103,6 +103,30 @@ static BackgroundOperations *_sharedManager = nil;
                         }
                         [entries addObject:category];
                     }                    break;
+                case JSONFetchDataModeArticleSearch:
+                    results = [[parsedObject valueForKey:@"responce"] valueForKey:@"docs"];
+                    
+                    for (NSDictionary *entryDic in results) {
+                        EntryItem *entry = [[EntryItem alloc] init];
+                        
+                        for (NSString *key in entryDic) {
+                            if ([key  isEqual: @"snippet"]) {
+                                entry.shortText = [entryDic valueForKey:key];
+                            } else if ([key  isEqual: @"headline"]) {
+                                entry.title = [[entryDic valueForKey:key] valueForKey:@"main"];
+                            } else if ([key  isEqual: @"web_url"]) {
+                                entry.url = [entryDic valueForKey:key];
+                            } else if ([key  isEqual: @"multimedia"]) {
+                                entry.urlThumbImage = [[entryDic valueForKey:key] objectAtIndex:2];
+                            } else if ([key isEqual:@"pub_date"]) {
+                                entry.date = [entryDic valueForKey:key];
+                            } else if ([key isEqual:@"section_name"]) {
+                                entry.section = [entryDic valueForKey:key];
+                            }
+                        }
+                        [entries addObject:entry];
+                    }
+                    break;
                 default:
                     break;
             }
