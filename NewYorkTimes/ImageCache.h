@@ -11,6 +11,8 @@
 @interface ImageCache : NSObject{
 @private
     NSMapTable *cacheTable;
+    NSMutableOrderedSet *values;
+    NSInteger maxSize;
 }
 
 + (ImageCache *)sharedInstance;

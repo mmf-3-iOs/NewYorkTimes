@@ -7,20 +7,36 @@
 //
 
 #import "ImageCache.h"
+#include <time.h>
+
+@interface CashItem : NSObject{
+    @public
+    NSData *data;
+    long time;
+}
+@end
+
+@implementation CashItem
+@end
+
+
 
 @implementation ImageCache
 
 
 + (ImageCache *) sharedInstance {
+    return [self sharedInstanceWithMaxSize:50];
+}
+
++ (ImageCache *) sharedInstanceWithMaxSize:(NSInteger) size {
     static ImageCache *_sharedInstance = nil;
     static dispatch_once_t onceToken;
     
     dispatch_once(&onceToken, ^{
         if (_sharedInstance == nil){
-            _sharedInstance = [[super allocWithZone:NULL] init];
+            _sharedInstance = [[super allocWithZone:NULL] initWithMaxSize: size];
         }
     });
-    
     return _sharedInstance;
 }
 
@@ -28,11 +44,17 @@
     return [self sharedInstance];
 }
 
-- (id)init {
+- (id)initWithMaxSize:(NSInteger) size{
     if (self = [super init]) {
         cacheTable = [NSMapTable mapTableWithKeyOptions:NSMapTableStrongMemory valueOptions:NSMapTableStrongMemory];
+        values = [[NSMutableOrderedSet alloc] init];
+        maxSize = size;
     }
     return self;
+}
+
+- (id)init {
+    return [self initWithMaxSize: 50];
 }
 
 
@@ -41,11 +63,26 @@
 }
 
 - (void)addImage:(NSData *)image withURL: (NSString *)url {
+    if (maxSize <= [values count]) {
+        [cacheTable removeObjectForKey:(NSString*)[values firstObject]];
+        [values removeObject:[values firstObject]];
+        NSLog(@"REMOVE");
+
+    }
     [cacheTable setObject:image forKey:url];
+    [values addObject:url];
+    NSLog(@"ADD");
+
 }
 
 - (NSData *)getImageWithURL: (NSString *)url {
-    return [cacheTable objectForKey:url];
+    NSData *data =[cacheTable objectForKey:url];
+    if (data) {
+        [values removeObject:url];
+        [values addObject:url];
+        NSLog(@"GET");
+    }
+    return data;
 }
 
 @end
