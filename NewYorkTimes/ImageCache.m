@@ -7,18 +7,6 @@
 //
 
 #import "ImageCache.h"
-#include <time.h>
-
-@interface CashItem : NSObject{
-    @public
-    NSData *data;
-    long time;
-}
-@end
-
-@implementation CashItem
-@end
-
 
 
 @implementation ImageCache
